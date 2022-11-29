@@ -24,7 +24,7 @@ import serial
 import sys
 import platform
 
-LATENCY_TIMER = 16
+LATENCY_TIMER = 1
 DEFAULT_BAUDRATE = 1000000
 
 
@@ -117,7 +117,7 @@ class PortHandler(object):
             # parity = serial.PARITY_ODD,
             # stopbits = serial.STOPBITS_TWO,
             bytesize=serial.EIGHTBITS,
-            timeout=0
+            timeout=0.01
         )
 
         self.is_open = True
